@@ -7,6 +7,7 @@ public class ItemStack {
     int quantity;
 
     public ItemStack(Item item, int quantity){
+        if(item == null) throw new IllegalArgumentException("Item cannot be null!");
         this.item = item;
         if(quantity < 1){
             quantity = 1; //Set quantity to 1.
