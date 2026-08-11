@@ -11,4 +11,9 @@ public class Item {
         if(name == null) throw new IllegalArgumentException("itemUtils.Item must have a name!");
         this.name = name;
     }
+
+    //Getters
+    public String getName() {
+        return name;
+    }
 }
