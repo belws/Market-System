@@ -47,5 +47,6 @@ public class ItemStack {
         setQuantity(getQuantity() + quantity);
         return true;
     }
+
 }
 

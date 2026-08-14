@@ -10,13 +10,5 @@ public class Main {
     Item sword = new Item("Sword", ItemCategory.EQUIPMENT);
     ItemStack appleStack = new ItemStack(apple, 6);
 
-        System.out.println(appleStack.hasItem(apple)); //True
-        System.out.println(appleStack.hasItem(otherApple));//True
-        System.out.println(appleStack.hasItem(sword));//False
-
-        System.out.println(appleStack.getQuantity());
-        appleStack.addItem(10);//Quantity must be positive
-        System.out.println(appleStack.getQuantity());
-
     }
 }
