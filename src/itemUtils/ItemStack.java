@@ -15,5 +15,22 @@ public class ItemStack {
         }
         else this.quantity = quantity;
     }
+    //Getters
+    public Item getItem(){
+        return item;
+    }
+    public int getQuantity(){
+        return quantity;
+    }
+
+    //Setters
+    public boolean setQuantity(int quantity){
+        if(quantity < 1){
+            quantity = 1;
+            System.out.println("Quantity must be positive");
+        }
+        this.quantity = quantity;
+    return true;
+    }
 }
 
