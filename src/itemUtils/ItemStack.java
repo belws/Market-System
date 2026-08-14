@@ -32,5 +32,24 @@ public class ItemStack {
         this.quantity = quantity;
     return true;
     }
+
+
+
+
+    public boolean hasItem(Item item){
+        return this.item.equals(item);
+    }
+    public boolean addItem(Item item, int quantity){
+        if(!hasItem(item)){
+            System.out.println("You cannot add that item to this stack!");
+            return false;
+        }
+        if(quantity < 1){
+            System.out.println("Quantity must be positive");
+            return false;
+        }
+        setQuantity(getQuantity() + quantity);
+        return true;
+    }
 }
 
