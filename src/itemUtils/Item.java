@@ -22,4 +22,14 @@ public class Item {
     public ItemCategory getItemCategory(){
         return itemCategory;
     }
+    //I need to override .equals() for Item so ItemStacks can get quantity accordingly.
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Item){
+            Item otherItem = (Item) obj;
+            return getName().equals(otherItem.getName());
+        }
+        return false;
+    }
+
 }
