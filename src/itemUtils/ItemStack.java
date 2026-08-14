@@ -57,5 +57,17 @@ public class ItemStack {
         setQuantity(getQuantity() - quantity);
         return true;
     }
+
+/*
+    I think for now an item stack can be equal to another item stack if their items are considered equal.
+    Also I might remove this later but I wanted to see if I got the concept down.
+ */
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof ItemStack stack){
+            return getItem().equals(stack.getItem());
+        }
+        return false;
+    }
 }
 
