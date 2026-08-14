@@ -5,14 +5,9 @@ import itemUtils.ItemStack;
 public class Main {
     public static void main(String[] args) {
         // Testing my constructors for invariants.
-        Item apple = new Item("Apple", ItemCategory.FOOD);
-        Item otherApple = new Item("Apple", ItemCategory.FOOD);
-        Item sword = new Item("Sword", ItemCategory.EQUIPMENT);
-        ItemStack appleStack = new ItemStack(apple, 6);
+        ItemStack appleStack = new ItemStack(new Item ("Apple", ItemCategory.FOOD), 16);
+        ItemStack otherStackOfApples = new ItemStack(new Item("Apple",ItemCategory.FOOD), 48);
 
-        System.out.println(appleStack.getQuantity());
-        appleStack.removeItem(6);
-        System.out.println(appleStack.getQuantity());
-
+        System.out.println(appleStack.equals(otherStackOfApples));
     }
 }
