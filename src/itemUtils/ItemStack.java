@@ -39,12 +39,8 @@ public class ItemStack {
     public boolean hasItem(Item item){
         return this.item.equals(item);
     }
-    public boolean addItem(Item item, int quantity){
-        if(!hasItem(item)){
-            System.out.println("You cannot add that item to this stack!");
-            return false;
-        }
-        if(quantity < 1){
+    public boolean addItem(int quantity){
+        if(quantity<1){
             System.out.println("Quantity must be positive");
             return false;
         }

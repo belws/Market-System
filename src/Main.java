@@ -14,13 +14,9 @@ public class Main {
         System.out.println(appleStack.hasItem(otherApple));//True
         System.out.println(appleStack.hasItem(sword));//False
 
-        System.out.println(appleStack.getQuantity());//6
-        appleStack.addItem(apple, 3);
-        System.out.println(appleStack.getQuantity());//9
-        appleStack.addItem(sword, 1);//You cannot add that item to this stack!
-        System.out.println(appleStack.getQuantity());//9
-        appleStack.addItem(apple, -1);//Quantity must be positive
-        System.out.println(appleStack.getQuantity());//9
+        System.out.println(appleStack.getQuantity());
+        appleStack.addItem(10);//Quantity must be positive
+        System.out.println(appleStack.getQuantity());
 
     }
 }
