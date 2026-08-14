@@ -47,6 +47,15 @@ public class ItemStack {
         setQuantity(getQuantity() + quantity);
         return true;
     }
-
+    public boolean removeItem(int quantity){
+        if(quantity >= getQuantity()){
+            System.out.println("You cant remove the ItemStack yet");
+            // Logic for this will be next
+            setQuantity(1);
+            return false;
+        }
+        setQuantity(getQuantity() - quantity);
+        return true;
+    }
 }
 
