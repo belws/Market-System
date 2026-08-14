@@ -18,4 +18,8 @@ public class Item {
     public String getName() {
         return name;
     }
+
+    public ItemCategory getItemCategory(){
+        return itemCategory;
+    }
 }
