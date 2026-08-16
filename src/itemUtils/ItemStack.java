@@ -13,6 +13,10 @@ public class ItemStack {
             quantity = 1; //Set quantity to 1.
             System.out.println("Quantity must be positive");
         }
+        if(quantity > 64){
+            quantity -= 64;
+            new ItemStack(item, quantity);
+        }
         else this.quantity = quantity;
     }
     //Getters
@@ -28,6 +32,10 @@ public class ItemStack {
         if(quantity < 1){
             quantity = 1;
             System.out.println("Quantity must be positive");
+        }
+        if(quantity > 64){
+            quantity -= 64;
+            new ItemStack(item, quantity);
         }
         this.quantity = quantity;
     return true;
