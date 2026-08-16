@@ -11,4 +11,11 @@ public class Inventory {
 
     public Inventory(){
     }
+
+    public boolean getContent(){
+        for(ItemStack stack : inventory){
+            System.out.println(stack.getItem().getName() + "x" + stack.getQuantity());
+        }
+        return true;
+    }
 }
