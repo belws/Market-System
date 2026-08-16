@@ -1,3 +1,4 @@
+import inventory.Inventory;
 import itemUtils.Item;
 import itemUtils.ItemCategory;
 import itemUtils.ItemStack;
@@ -5,9 +6,9 @@ import itemUtils.ItemStack;
 public class Main {
     public static void main(String[] args) {
         // Testing my constructors for invariants.
-        ItemStack appleStack = new ItemStack(new Item ("Apple", ItemCategory.FOOD), 16);
-        ItemStack otherStackOfApples = new ItemStack(new Item("Apple",ItemCategory.FOOD), 48);
-
-        System.out.println(appleStack.equals(otherStackOfApples));
+        Item apple = new Item ("Apple", ItemCategory.FOOD);
+        ItemStack appleStack = new ItemStack(apple, 16);
+        ItemStack otherStackOfApples = new ItemStack(apple, 48);
+        Inventory inventory = new Inventory();
     }
 }
