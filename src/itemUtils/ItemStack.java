@@ -23,6 +23,7 @@ public class ItemStack {
     public int getQuantity(){
         return quantity;
     }
+    public int getMaxQuantity(){return maxQuantity;}
 
     //Setters
     public boolean setQuantity(int quantity){
