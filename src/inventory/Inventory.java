@@ -16,20 +16,22 @@ public class Inventory {
     public boolean addItem(Item item, int quantity){
         if(item == null || quantity <= 0)
             return false;
-        //Loop through inventory
-        for(ItemStack stack : inventory){
-            //If this item exists in a stack we only modify the quantity
-            if(stack.hasItem(item)){
-                stack.setQuantity(stack.getQuantity() + quantity);
-                return true;
+
+        for(ItemStack stack : inventory) {
+            int space = stack.getMaxQuantity() - stack.getQuantity();
+            if (stack.hasItem(item)) {
+                if (quantity <= space) {
+                    stack.setQuantity(stack.getQuantity() + quantity);
+                    return true;
+                }
+                stack.setQuantity((stack.getQuantity() + space));
+                quantity -= space;
             }
         }
-
-
-        //Might handle inventory size later
-
-
-        //We create a new stack if the item doesnt exist yet
+        while (quantity > 64){
+            inventory.add(new ItemStack(item, 64));
+            quantity -= 64;
+        }
         inventory.add(new ItemStack(item, quantity));
         return true;
     }
