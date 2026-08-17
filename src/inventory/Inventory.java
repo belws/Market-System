@@ -17,14 +17,25 @@ public class Inventory {
         if(item == null || quantity <= 0)
             return false;
         //Loop through inventory
-        for(ItemStack stack : inventory){
-            //If this item exists in a stack we only modify the quantity
-            if(stack.hasItem(item)){
-                stack.setQuantity(stack.getQuantity() + quantity);
-                return true;
+        if(quantity < 64){
+            for(ItemStack stack : inventory){
+                //If this item exists in a stack we only modify the quantity
+                if(stack.hasItem(item)){
+                    stack.setQuantity(stack.getQuantity() + quantity);
+                    return true;
+                }
             }
         }
+        else {
+            int remaining = quantity;
+            while (remaining > 64){
+                inventory.add(new ItemStack(item, 64));
+                remaining -= 64;
 
+            }
+            inventory.add(new ItemStack(item, remaining));
+            return true;
+        }
 
         //Might handle inventory size later
 
