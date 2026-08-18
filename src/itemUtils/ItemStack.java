@@ -5,6 +5,7 @@ package itemUtils;
 public class ItemStack {
     Item item;
     int quantity;
+    int maxQuantity = 64;
 
     public ItemStack(Item item, int quantity){
         if(item == null) throw new IllegalArgumentException("Item cannot be null!");
@@ -22,6 +23,7 @@ public class ItemStack {
     public int getQuantity(){
         return quantity;
     }
+    public int getMaxQuantity(){return maxQuantity;}
 
     //Setters
     public boolean setQuantity(int quantity){
