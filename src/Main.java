@@ -33,5 +33,13 @@ public class Main {
         //9 Checks whether "Alex" exists again
         System.out.println(players.contains("Alex"));
 
+        /*
+        After discussing if I should create a Player class and continue with HashSet players,
+        ChatGPT recommanded I should use my current Item class instead.
+
+            New assignment: Create two Item objects representing the same item.
+         */
+        Item apple = new Item("Apple", ItemCategory.FOOD);
+        Item anotherApple = new Item("Apple", ItemCategory.FOOD);
     }
 }
