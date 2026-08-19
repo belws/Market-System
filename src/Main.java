@@ -62,5 +62,16 @@ public class Main {
         items.add(anotherApple);
         System.out.println(items.size()); // Print = 2
 
+        /*
+        Next I will print both hashCodes
+         */
+        System.out.println(apple.hashCode()); // 230835489
+        System.out.println(anotherApple.hashCode()); // 280884709
+        /*
+        After making hashCode return name.hashCode()
+        size = 1
+        hashCode = 63476538 for both
+         */
+
     }
 }
