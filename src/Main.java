@@ -46,5 +46,13 @@ public class Main {
         inventory.put(apple,50);
         System.out.println(inventory.get(anotherApple));
 
+        //Testing with a null key
+        System.out.println(inventory.size());
+        System.out.println(inventory.getOrDefault(new Item("Bread", ItemCategory.FOOD), 0));
+        System.out.println(inventory.size());
+        /*
+        getOrDefault will return that value for the search but will not add the key to the map.
+         */
+
     }
 }
