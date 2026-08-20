@@ -68,13 +68,21 @@ public class Main {
         achievements.add(Achievements.MASTERFUL_COLLECTION);
 
         HashMap<Item, Integer> questItem = new HashMap<>();
-
+        questItem.put(apple, 1);
+        addApples(questItem, apple);
+        System.out.println(getValue(questItem, apple));
         }
-        void addApples(){
+        static void addApples(HashMap hashMap, Item item){
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter how many Apples you found");
             int foundApples = scanner.nextInt();
-            // I think we might need a getter and setter here
+            //Attempt to sneak through without a setter
+            int current = getValue(hashMap, item) + foundApples;
+            hashMap.put(item, current);
 
-    }
+        }
+        static int getValue(HashMap hashMap, Item item){
+        return (int) hashMap.getOrDefault(item, 0);
+        }
+
 }
