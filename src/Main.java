@@ -36,7 +36,7 @@ public class Main {
         System.out.println(items.containsKey("Apple"));
         System.out.println(items.containsValue(64));
         items.remove("Diamond");
-        */
+
 
         //Now I will use HashMap with objects
         Item apple = new Item("Apple", ItemCategory.FOOD);
@@ -50,9 +50,15 @@ public class Main {
         System.out.println(inventory.size());
         System.out.println(inventory.getOrDefault(new Item("Bread", ItemCategory.FOOD), 0));
         System.out.println(inventory.size());
-        /*
+
         getOrDefault will return that value for the search but will not add the key to the map.
          */
 
+
+        /* The next assignment is to mix HashSet with HashMap and make a mini system that uses both
+            My fist idea is to make a HashSet with called 'achievements' ,
+            then collecting enough of an item contained in a HashMap <Item, Integer> questItems
+            should print my achievements.
+         */
     }
 }
