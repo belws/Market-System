@@ -10,7 +10,7 @@ public class Main {
         /*
         Here we go again :)
         Today's lesson is HashMap and from what I gathered so far this represents the relationship between a key and a value.
-         */
+
         HashMap<String, Integer> items = new HashMap<>();
 
         //1 Put "Apple" → 50
@@ -31,11 +31,20 @@ public class Main {
         /*Using your HashMap<String, Integer> items, figure out how to:
             check whether a key exists
             check whether a value exists
-            remove a key/value pair */
+            remove a key/value pair
 
         System.out.println(items.containsKey("Apple"));
         System.out.println(items.containsValue(64));
         items.remove("Diamond");
+        */
+
+        //Now I will use HashMap with objects
+        Item apple = new Item("Apple", ItemCategory.FOOD);
+        Item anotherApple = new Item("Apple", ItemCategory.FOOD);
+        HashMap<Item, Integer> inventory =  new HashMap<>();
+        // New assignment: check if 2 equal objects with the same HashCode are the same key
+        inventory.put(apple,50);
+        System.out.println(inventory.get(anotherApple));
 
     }
 }
