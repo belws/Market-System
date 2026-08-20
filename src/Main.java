@@ -27,5 +27,15 @@ public class Main {
         System.out.println(items.get("Diamond"));
         //7 Print the size of the map
         System.out.println(items.size());
+
+        /*Using your HashMap<String, Integer> items, figure out how to:
+            check whether a key exists
+            check whether a value exists
+            remove a key/value pair */
+
+        System.out.println(items.containsKey("Apple"));
+        System.out.println(items.containsValue(64));
+        items.remove("Diamond");
+
     }
 }
