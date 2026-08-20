@@ -4,6 +4,7 @@ import itemUtils.ItemStack;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -65,6 +66,15 @@ public class Main {
         achievements.add(Achievements.GETTING_STARTED);
         achievements.add(Achievements.WAY_TO_GO);
         achievements.add(Achievements.MASTERFUL_COLLECTION);
+
+        HashMap<Item, Integer> questItem = new HashMap<>();
+
+        }
+        void addApples(){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter how many Apples you found");
+            int foundApples = scanner.nextInt();
+            // I think we might need a getter and setter here
 
     }
 }
