@@ -60,5 +60,11 @@ public class Main {
             then collecting enough of an item contained in a HashMap <Item, Integer> questItems
             should print my achievements.
          */
+        Item apple = new Item("Apple", ItemCategory.FOOD);
+        HashSet<Achievements> achievements = new HashSet<>();
+        achievements.add(Achievements.GETTING_STARTED);
+        achievements.add(Achievements.WAY_TO_GO);
+        achievements.add(Achievements.MASTERFUL_COLLECTION);
+
     }
 }
