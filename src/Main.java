@@ -68,9 +68,8 @@ public class Main {
         achievements.add(Achievements.MASTERFUL_COLLECTION);
 
         HashMap<Item, Integer> questItem = new HashMap<>();
-        questItem.put(apple, 1);
-        addApples(questItem, apple);
-        System.out.println(getValue(questItem, apple));
+        play(questItem, apple);
+
         }
         static void addApples(HashMap hashMap, Item item){
             Scanner scanner = new Scanner(System.in);
@@ -85,4 +84,27 @@ public class Main {
         return (int) hashMap.getOrDefault(item, 0);
         }
 
-}
+        static void play(HashMap hashMap, Item item){
+            while ((int) hashMap.getOrDefault(item, 0 ) < 100){
+                addApples(hashMap, item);
+                System.out.println("You found " + getValue(hashMap, item) + " apples");
+                getAchievementMessageById(hashMap, item);
+
+            }
+        }
+        static void getAchievementMessageById(HashMap hashMap, Item item) {
+            for (Achievements ach : Achievements.values()) {
+                if ((int) hashMap.getOrDefault(item, 0) >= ach.getAmount()) {
+                    if (ach.getId() == 0) {
+                        System.out.println("Achievement: " + ach.getMessage());
+                    }
+                    if (ach.getId() == 1) {
+                        System.out.println("Achievement: " + ach.getMessage());
+                    }
+                    if (ach.getId() == 2) {
+                        System.out.println("Achievement: " + ach.getMessage());
+                    }
+                }
+            }
+        }
+    }
